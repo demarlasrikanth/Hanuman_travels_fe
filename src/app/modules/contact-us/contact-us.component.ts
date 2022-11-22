@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { SharedServicesService } from 'src/services/shared-services.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-contact-us',
+  templateUrl: './contact-us.component.html',
+  styleUrls: ['./contact-us.component.css']
 })
-export class HomeComponent implements OnInit {
+export class ContactUsComponent implements OnInit {
 
   constructor(private shareService:SharedServicesService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.shareService.sendRefresh()
+
   }
 
 }

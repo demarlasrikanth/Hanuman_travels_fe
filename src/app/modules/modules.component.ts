@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedServicesService } from 'src/services/shared-services.service';
 
 @Component({
   selector: 'app-modules',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModulesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private shareService:SharedServicesService) {
+    this.shareService.getRefresh()
+   }
 
   ngOnInit(): void {
   }
