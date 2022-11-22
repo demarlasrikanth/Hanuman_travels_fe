@@ -12,14 +12,14 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
     background: url("../src/assets/img/hanuman.jpg");
-    height: 100%;
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: fit-content;
 }
-
+:host ::ng-deep .form-control{
+    border: color #ffc451!important; ;
+}
 a {
     color: #ffc451;
     text-decoration: none;
@@ -526,7 +526,8 @@ h6 {
   # Sections General
   --------------------------------------------------------------*/
 section {
-    padding: 100px 0;
+    padding-top: 150px;
+    margin-bottom: 50px;
     overflow: hidden;
 }
 
@@ -1329,8 +1330,8 @@ section {
     border-radius: 4px;
 }
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.form-control:focus,
+ textarea:focus {
     border-color: #ffc451;
 }
 
