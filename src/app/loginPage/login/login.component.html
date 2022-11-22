@@ -1,64 +1,72 @@
-<div class="login-page">
-
-    <div class="login-box">
-        <div class="login-logo">
-            <a><b>Jai Hanuman</b>Travels</a>
+<!-- <div class="card">
+    <div class="card-body login-card-body">
+        <h3 class="login-box-msg">Login In</h3>
+        
+        <div class="social-auth-links text-center mb-3">
+            <p>- OR -</p>
+            <a href="#" class="btn btn-block btn-primary">
+                <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+            </a>
+            <a href="#" class="btn btn-block btn-danger">
+                <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+            </a>
         </div>
 
-        <div class="card">
-            <div class="card-body login-card-body">
-                <h3 class="login-box-msg">Login In</h3>
-                <form #loginForm="ngForm" name="loginForm" novalidate>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" name="username" [(ngModel)]="loginmodel.username"
-                            #username="ngModel" placeholder="Email">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
-                            </div>
-                        </div>
+        <p class="mb-1">
+            <a href="forgot-password.html">I forgot my password</a>
+        </p>
+        <p class="mb-0">
+            <a routerLink="/signup" class="text-center">Register Here</a>
+        </p>
+    </div>
+
+</div> -->
+
+<div class="container aos-init aos-animate text-center">
+    <div class="section-title">
+        
+        <p>jai Hanuman</p>
+        <h2 >Travels</h2>
+    </div>
+    <div class="card">
+        <div class="card-header section-title">
+            <p>Log In</p>
+        </div>
+        <div class="card-body">
+           <form #loginForm="ngForm" name="loginForm" novalidate>
+            <div class="input-group mb-3">
+                <input type="email" class="form-control" name="username" [(ngModel)]="loginmodel.username"
+                    #username="ngModel" placeholder="Email">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope"></span>
                     </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="password" [(ngModel)]="loginmodel.password"
-                            #password="ngModel" placeholder="Password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="icheck-primary">
-                                <input type="checkbox" id="remember">&nbsp;
-                                <label for="remember">
-                                    Remember Me
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block text-center" (click)="onLogin(loginForm)">Sign In</button>
-                        </div>
-                    </div>
-                </form>
-                <div class="social-auth-links text-center mb-3">
-                    <p>- OR -</p>
-                    <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                    </a>
-                    <a href="#" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                    </a>
                 </div>
-
-                <p class="mb-1">
-                    <a href="forgot-password.html">I forgot my password</a>
-                </p>
-                <p class="mb-0">
-                    <a routerLink="/signup" class="text-center">Register Here</a>
-                </p>
             </div>
-
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" name="password" [(ngModel)]="loginmodel.password"
+                    #password="ngModel" placeholder="Password">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="icheck-primary">
+                        <input type="checkbox" id="remember">&nbsp;
+                        <label class="remember">
+                            Remember Me
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-block text-center"
+                        (click)="onLogin(loginForm)">Sign In</button>
+                </div>
+            </div>
+        </form>
         </div>
     </div>
 </div>

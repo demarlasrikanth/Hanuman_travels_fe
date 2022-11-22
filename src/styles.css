@@ -11,6 +11,13 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
+    background: url("../src/assets/img/hanuman.jpg");
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a {
@@ -82,7 +89,7 @@ h6 {
     background: #151515;
 }
 
-/* #preloader:before {
+#preloader:before {
     content: "";
     position: fixed;
     top: calc(50% - 0px);
@@ -95,7 +102,7 @@ h6 {
     height: 60px;
     -webkit-animation: animate-preloader 1s linear infinite;
     animation: animate-preloader 1s linear infinite;
-} */
+}
 
 @-webkit-keyframes animate-preloader {
     0% {
@@ -535,7 +542,7 @@ section {
     margin: 0 0 5px 0;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #aaaaaa;
+    color: #ffc451;
     font-family: "Poppins", sans-serif;
 }
 
@@ -551,11 +558,11 @@ section {
 .section-title p {
     margin: 0;
     margin: 0;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: #151515;
+    color: #ddd;
 }
 
 /*--------------------------------------------------------------
@@ -1572,4 +1579,3 @@ section {
     font-size: 13px;
     color: #fff;
 }
-

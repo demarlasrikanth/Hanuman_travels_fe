@@ -1,0 +1,18 @@
+.card {
+    /* left: 300px; */
+    width: fit-content;
+    background-color: transparent;
+    box-shadow: 0 0 20px rgb(135 133 147 / 68%);
+    /* padding: 20px; */
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+
+}
+
+.remember {
+    color: #ddd;
+}
+
+.card-body {
+    padding: 2.25rem;
+}
