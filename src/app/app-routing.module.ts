@@ -5,17 +5,20 @@ import { SignupComponent } from './signup/signup/signup.component';
 
 const routes: Routes = [
   {
-    pathMatch: 'full',
-    path: 'login',
-    component: LoginComponent
-
+    path: '', 
+    redirectTo: 'login', 
+    pathMatch: 'full' 
+  },
+  {
+  path:'login',
+  component:LoginComponent
   },
   {
     path: 'signup',
     component:SignupComponent
   },
   {
-    path: 'modules',
+    path: '',
     loadChildren: () => import('./modules/modules.module').then(m => m.ModulesModule)
   },
 

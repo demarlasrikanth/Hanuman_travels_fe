@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ModulesModule } from "./modules/modules.module";
 import { LoginComponent } from './loginPage/login/login.component';
 import { SignupComponent } from './signup/signup/signup.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -20,6 +22,8 @@ import { SignupComponent } from './signup/signup/signup.component';
         BrowserModule,
         AppRoutingModule,
         ModulesModule,
+        FormsModule,
+        CommonModule
     ]
 })
 export class AppModule { }
