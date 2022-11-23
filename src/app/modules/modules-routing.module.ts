@@ -17,6 +17,10 @@ const routes: Routes = [
         path:"contactUs",
         component:ContactUsComponent
       },
+      {
+        path:"administration",
+        loadChildren:() => import('./adminstration/adminstration.module').then(m => m.AdminstrationModule)
+      },
 
     ]
     
