@@ -12,14 +12,14 @@ const routes: Routes = [
       {
         path:"home",
         loadChildren:() => import('./home/home/home.module').then(m => m.HomeModule)
+
       },
       {
         path:"contactUs",
         component:ContactUsComponent
       },
       {
-        path:"administration",
-        loadChildren:() => import('./adminstration/adminstration.module').then(m => m.AdminstrationModule)
+
       },
 
     ]

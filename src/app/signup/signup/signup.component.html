@@ -1,78 +1,159 @@
-<div class="register-page" style="min-height: 570.781px;">
-    <div class="register-box">
-        <div class="register-logo">
-            <a><b>Jai Hanuman</b>Travels</a>
-        </div>
-        <div class="card">
-            <div class="card-body register-card-body">
-                <h3 class="login-box-msg">Register</h3>
-                <form>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Full name">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-user"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Retype password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="icheck-primary">
-                                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
-                                <label for="agreeTerms">
-                                    I agree to the <a href="#">terms</a>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Register</button>
-                        </div>
-
-                    </div>
-                </form>
-                <div class="social-auth-links text-center">
-                    <p>- OR -</p>
-                    <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i>
-                        Sign up using Facebook
-                    </a>
-                    <a href="#" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i>
-                        Sign up using Google+
-                    </a>
+<section id="contact" class="contact">
+  <div class="container aos-init aos-animate" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Contact Us</p>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h3 class="login-box-msg">Register</h3>
+        <div class="container">
+          <form #signupForm="ngForm" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label>First Name</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  class="form-control"
+                  [(ngModel)]="signupmodel.firstName"
+                  #firstName="ngModel"
+                  [ngClass]="{
+                    'is-invalid': signupForm.submitted && firstName.invalid
+                  }"
+                  required
+                />
+                <div
+                  *ngIf="signupForm.submitted && firstName.invalid"
+                  class="invalid-feedback"
+                >
+                  <!-- f['fName'].errors -->
+                  <!-- <div *ngIf="firstName.errors?.['required']">First Name is required</div> -->
+                  <div *ngIf="firstName.errors?.['required']">
+                    First Name is required
+                  </div>
                 </div>
-                <a  class="text-center">I already have a membership</a>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Last Name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  class="form-control"
+                  [(ngModel)]="signupmodel.lastName"
+                  #lastName="ngModel"
+                  [ngClass]="{
+                    'is-invalid': signupForm.submitted && lastName.invalid
+                  }"
+                  required
+                />
+                <div
+                  *ngIf="signupForm.submitted && lastName.invalid"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="lastName.errors">First Name is required</div>
+                </div>
+                <div class="col-md-12 form-group mt-3 mt-md-0">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    [(ngModel)]="signupmodel.emailId"
+                    #email="ngModel"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="phoneNo"
+                  id="phoneNo"
+                  [(ngModel)]="signupmodel.phoneNo"
+                  #phoneNo="ngModel"
+                  placeholder="PhoneNo"
+                  required
+                />
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="password"
+                    id="password"
+                    [(ngModel)]="signupmodel.password"
+                    #phoneNo="ngModel"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="password"
+                    id="password"
+                    [(ngModel)]="signupmodel.password"
+                    #phoneNo="ngModel"
+                    placeholder="Retype Password"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group mt-3">
+                <textarea
+                  class="form-control"
+                  name="address"
+                  rows="5"
+                  [(ngModel)]="signupmodel.address"
+                  #address="ngModel"
+                  placeholder="Address"
+                  required=""
+                ></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">
+                  Your message has been sent. Thank you!
+                </div>
+              </div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  (click)="onSubmit(signupForm)"
+                  [disabled]="!signupForm.valid"
+                >
+                  Send Message
+                </button>
+              </div>
+
+              <div class="social-auth-links row text-center">
+                <p>- OR -</p>
+
+                <a href="#" class="btn btn-primary col-4 padding">
+                  <i class="fab fa-facebook mr-12"></i>
+                  Sign up using Facebook
+                </a>
+                &nbsp;
+                <a href="#" class="btn btn-danger col-4">
+                  <i class="fab fa-google-plus mr-12"></i>
+                  Sign up using Google+
+                </a>
+              </div>
             </div>
 
+            <a class="text-center">I already have a membership</a>
+          </form>
         </div>
+      </div>
     </div>
-
-
-
-
-</div>
+  </div>
+</section>
