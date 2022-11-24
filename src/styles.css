@@ -1,9 +1,15 @@
-/**
-* Template Name: Gp - v4.9.1
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}
 
 /*--------------------------------------------------------------
 # General
@@ -11,8 +17,15 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
+    background: url("../src/assets/img/hanuman.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
 }
-
+:host ::ng-deep .form-control{
+    border: color #ffc451!important; ;
+}
 a {
     color: #ffc451;
     text-decoration: none;
@@ -82,7 +95,7 @@ h6 {
     background: #151515;
 }
 
-/* #preloader:before {
+#preloader:before {
     content: "";
     position: fixed;
     top: calc(50% - 0px);
@@ -95,7 +108,7 @@ h6 {
     height: 60px;
     -webkit-animation: animate-preloader 1s linear infinite;
     animation: animate-preloader 1s linear infinite;
-} */
+}
 
 @-webkit-keyframes animate-preloader {
     0% {
@@ -416,9 +429,9 @@ h6 {
   --------------------------------------------------------------*/
 #hero {
     width: 100%;
-    height: 100vh;
-    background: url("../src/assets/img/hero-bg.jpg") top center;
-    background-size: cover;
+    height: 100%;
+    background: transparent;
+    background-size:auto;
     position: relative;
 }
 
@@ -519,7 +532,8 @@ h6 {
   # Sections General
   --------------------------------------------------------------*/
 section {
-    padding: 100px 0;
+    padding-top: 150px;
+    margin-bottom: 50px;
     overflow: hidden;
 }
 
@@ -535,7 +549,7 @@ section {
     margin: 0 0 5px 0;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #aaaaaa;
+    color: #ffc451;
     font-family: "Poppins", sans-serif;
 }
 
@@ -551,11 +565,11 @@ section {
 .section-title p {
     margin: 0;
     margin: 0;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: #151515;
+    color: #ddd;
 }
 
 /*--------------------------------------------------------------
@@ -1322,8 +1336,8 @@ section {
     border-radius: 4px;
 }
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.form-control:focus,
+ textarea:focus {
     border-color: #ffc451;
 }
 
@@ -1572,4 +1586,3 @@ section {
     font-size: 13px;
     color: #fff;
 }
-

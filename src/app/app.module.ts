@@ -23,7 +23,6 @@ import { CommonModule } from '@angular/common';
         AppRoutingModule,
         ModulesModule,
         FormsModule,
-        CommonModule
-    ]
+        CommonModule    ]
 })
 export class AppModule { }

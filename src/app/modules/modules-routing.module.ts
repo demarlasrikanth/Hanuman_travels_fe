@@ -19,8 +19,6 @@ const routes: Routes = [
         component:ContactUsComponent
       },
       {
-        path:"adminstration",
-        loadChildren:() => import('./adminstration/adminstration.module').then(m => m.AdminstrationModule)
 
       },
 

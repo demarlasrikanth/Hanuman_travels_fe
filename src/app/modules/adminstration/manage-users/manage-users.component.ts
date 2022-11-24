@@ -10,6 +10,9 @@ export class ManageUsersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  //   document.addEventListener('DOMContentLoaded', function () {
+  //     let table = new DataTable('#example');
+  // });
   }
 
 }
