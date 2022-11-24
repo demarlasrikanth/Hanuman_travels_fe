@@ -1,0 +1,20 @@
+.card {
+    position: inherit;
+    display: block;
+    flex-direction: none;
+    width:70%;
+    text-align: center;
+    min-width: 30%;
+    /* word-wrap: break-word; */
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+input.ng-invalid.ng-touched{
+    border: red 1px solid;
+  }
+  small{
+    color:red
+
+  }

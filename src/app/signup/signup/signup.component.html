@@ -8,91 +8,151 @@
       <div class="card-body">
         <h3 class="login-box-msg">Register</h3>
         <div class="container">
-          <form role="form" class="php-email-form">
+          <form #signupForm="ngForm" role="form" class="php-email-form">
             <div class="row">
               <div class="col-md-6 form-group">
+                <label>First Name</label>
                 <input
                   type="text"
-                  name="name"
+                  name="firstName"
                   class="form-control"
-                  id="name"
                   [(ngModel)]="signupmodel.firstName"
-                  #name="ngModel"
-                  placeholder="Your Name"
-                  required=""
+                  #firstName="ngModel"
+                  [ngClass]="{
+                    'is-invalid': signupForm.submitted && firstName.invalid
+                  }"
+                  required
                 />
+                <div
+                  *ngIf="signupForm.submitted && firstName.invalid"
+                  class="invalid-feedback"
+                >
+                  <!-- f['fName'].errors -->
+                  <!-- <div *ngIf="firstName.errors?.['required']">First Name is required</div> -->
+                  <div *ngIf="firstName.errors?.['required']">
+                    First Name is required
+                  </div>
+                </div>
               </div>
+
               <div class="col-md-6 form-group">
+                <label>Last Name</label>
                 <input
                   type="text"
-                  name="name"
+                  name="lastName"
                   class="form-control"
-                  id="name"
                   [(ngModel)]="signupmodel.lastName"
-                  #name="ngModel"
-                  placeholder="Your Last Name"
-                  required=""
+                  #lastName="ngModel"
+                  [ngClass]="{
+                    'is-invalid': signupForm.submitted && lastName.invalid
+                  }"
+                  required
                 />
+                <div
+                  *ngIf="signupForm.submitted && lastName.invalid"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="lastName.errors">First Name is required</div>
+                </div>
+                <div class="col-md-12 form-group mt-3 mt-md-0">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    [(ngModel)]="signupmodel.emailId"
+                    #email="ngModel"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
               </div>
-              <div class="col-md-6 form-group mt-3 mt-md-0">
+              <div class="form-group mt-3">
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
-                  name="email"
-                  id="email"
-                  [(ngModel)]="signupmodel.emailId"
-                  #email="ngModel"
-                  placeholder="Your Email"
-                  required=""
+                  name="phoneNo"
+                  id="phoneNo"
+                  [(ngModel)]="signupmodel.phoneNo"
+                  #phoneNo="ngModel"
+                  placeholder="PhoneNo"
+                  required
                 />
               </div>
-            </div>
-            <div class="form-group mt-3">
-              <input
-                type="text"
-                class="form-control"
-                name="subject"
-                id="subject"
-                placeholder="Subject"
-                required=""
-              />
-            </div>
-            <div class="form-group mt-3">
-              <textarea
-                class="form-control"
-                name="message"
-                rows="5"
-                placeholder="Message"
-                required=""
-              ></textarea>
-            </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">
-                Your message has been sent. Thank you!
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="password"
+                    id="password"
+                    [(ngModel)]="signupmodel.password"
+                    #phoneNo="ngModel"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="password"
+                    id="password"
+                    [(ngModel)]="signupmodel.password"
+                    #phoneNo="ngModel"
+                    placeholder="Retype Password"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group mt-3">
+                <textarea
+                  class="form-control"
+                  name="address"
+                  rows="5"
+                  [(ngModel)]="signupmodel.address"
+                  #address="ngModel"
+                  placeholder="Address"
+                  required=""
+                ></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">
+                  Your message has been sent. Thank you!
+                </div>
+              </div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  (click)="onSubmit(signupForm)"
+                  [disabled]="!signupForm.valid"
+                >
+                  Send Message
+                </button>
+              </div>
+
+              <div class="social-auth-links row text-center">
+                <p>- OR -</p>
+
+                <a href="#" class="btn btn-primary col-4 padding">
+                  <i class="fab fa-facebook mr-12"></i>
+                  Sign up using Facebook
+                </a>
+                &nbsp;
+                <a href="#" class="btn btn-danger col-4">
+                  <i class="fab fa-google-plus mr-12"></i>
+                  Sign up using Google+
+                </a>
               </div>
             </div>
-            <div class="text-center">
-              <button type="submit">Send Message</button>
-            </div>
+
+            <a class="text-center">I already have a membership</a>
           </form>
-          <div class="social-auth-links row text-center">
-            <p>- OR -</p>
-
-            <a href="#" class="btn btn-primary col-4 padding">
-              <i class="fab fa-facebook mr-12"></i>
-              Sign up using Facebook
-            </a>
-            &nbsp;
-            <a href="#" class="btn btn-danger col-4">
-              <i class="fab fa-google-plus mr-12"></i>
-              Sign up using Google+
-            </a>
-          </div>
         </div>
-
-        <a class="text-center">I already have a membership</a>
       </div>
     </div>
   </div>
