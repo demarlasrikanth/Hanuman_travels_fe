@@ -1,78 +1,99 @@
-<div class="register-page" style="min-height: 570.781px;">
-    <div class="register-box">
-        <div class="register-logo">
-            <a><b>Jai Hanuman</b>Travels</a>
-        </div>
-        <div class="card">
-            <div class="card-body register-card-body">
-                <h3 class="login-box-msg">Register</h3>
-                <form>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Full name">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-user"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Retype password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="icheck-primary">
-                                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
-                                <label for="agreeTerms">
-                                    I agree to the <a href="#">terms</a>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Register</button>
-                        </div>
-
-                    </div>
-                </form>
-                <div class="social-auth-links text-center">
-                    <p>- OR -</p>
-                    <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i>
-                        Sign up using Facebook
-                    </a>
-                    <a href="#" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i>
-                        Sign up using Google+
-                    </a>
-                </div>
-                <a  class="text-center">I already have a membership</a>
-            </div>
-
-        </div>
+<section id="contact" class="contact">
+  <div class="container aos-init aos-animate" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Contact Us</p>
     </div>
+    <div class="card">
+      <div class="card-body">
+        <h3 class="login-box-msg">Register</h3>
+        <div class="container">
+          <form role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="name"
+                  [(ngModel)]="signupmodel.firstName"
+                  #name="ngModel"
+                  placeholder="Your Name"
+                  required=""
+                />
+              </div>
+              <div class="col-md-6 form-group">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="name"
+                  [(ngModel)]="signupmodel.lastName"
+                  #name="ngModel"
+                  placeholder="Your Last Name"
+                  required=""
+                />
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  [(ngModel)]="signupmodel.emailId"
+                  #email="ngModel"
+                  placeholder="Your Email"
+                  required=""
+                />
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input
+                type="text"
+                class="form-control"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+                required=""
+              />
+            </div>
+            <div class="form-group mt-3">
+              <textarea
+                class="form-control"
+                name="message"
+                rows="5"
+                placeholder="Message"
+                required=""
+              ></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your message has been sent. Thank you!
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+          <div class="social-auth-links row text-center">
+            <p>- OR -</p>
 
+            <a href="#" class="btn btn-primary col-4 padding">
+              <i class="fab fa-facebook mr-12"></i>
+              Sign up using Facebook
+            </a>
+            &nbsp;
+            <a href="#" class="btn btn-danger col-4">
+              <i class="fab fa-google-plus mr-12"></i>
+              Sign up using Google+
+            </a>
+          </div>
+        </div>
 
-
-
-</div>
+        <a class="text-center">I already have a membership</a>
+      </div>
+    </div>
+  </div>
+</section>
